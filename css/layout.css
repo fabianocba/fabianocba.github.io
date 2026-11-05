@@ -147,14 +147,6 @@
   animation: surgir-baixo 0.8s 0.2s ease both;
 }
 
-.hero__legenda {
-  margin-top: var(--espaco-2);
-  text-align: center;
-  font-family: var(--fonte-mono);
-  font-size: 0.85rem;
-  color: var(--cor-texto-suave);
-}
-
 .sobre__bio {
   display: grid;
   gap: var(--espaco-2);
