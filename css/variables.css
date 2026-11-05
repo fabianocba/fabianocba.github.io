@@ -1,0 +1,66 @@
+:root {
+  color-scheme: dark;
+
+  --cor-fundo: #0a110e;
+  --cor-fundo-alt: #0d1612;
+  --cor-superficie: #121e19;
+  --cor-borda: #1f3329;
+  --cor-texto: #e6f2ec;
+  --cor-texto-suave: #9bb5a8;
+  --cor-primaria: #22c55e;
+  --cor-primaria-forte: #16a34a;
+  --cor-secundaria: #2dd4bf;
+  --cor-sobre-primaria: #04130b;
+  --cor-erro: #f87171;
+  --cor-sucesso: #4ade80;
+  --cor-grade: rgb(34 197 94 / 0.06);
+
+  --gradiente: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  --sombra: 0 12px 32px -14px rgb(0 0 0 / 0.7);
+  --brilho: 0 0 0 1px rgb(34 197 94 / 0.3), 0 14px 40px -12px rgb(34 197 94 / 0.35);
+
+  --fonte-titulo: "Space Grotesk", system-ui, sans-serif;
+  --fonte-texto: "Inter", system-ui, sans-serif;
+  --fonte-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --texto-base: clamp(1rem, 0.95rem + 0.2vw, 1.0625rem);
+  --texto-h1: clamp(2.75rem, 2rem + 4vw, 5rem);
+  --texto-h2: clamp(1.9rem, 1.5rem + 1.8vw, 2.75rem);
+  --texto-h3: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
+
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: 2rem;
+  --espaco-5: 3rem;
+  --espaco-6: clamp(4rem, 3rem + 5vw, 7rem);
+
+  --raio: 16px;
+  --raio-sm: 8px;
+  --raio-pilula: 999px;
+  --transicao: 250ms ease;
+
+  --largura-max: 1140px;
+  --altura-header: 72px;
+}
+
+:root:has(#tema:checked) {
+  color-scheme: light;
+
+  --cor-fundo: #f4f9f6;
+  --cor-fundo-alt: #e9f3ed;
+  --cor-superficie: #ffffff;
+  --cor-borda: #d3e4da;
+  --cor-texto: #0e1f17;
+  --cor-texto-suave: #4b6358;
+  --cor-primaria: #15803d;
+  --cor-primaria-forte: #166534;
+  --cor-secundaria: #0f766e;
+  --cor-sobre-primaria: #ffffff;
+  --cor-erro: #dc2626;
+  --cor-sucesso: #16a34a;
+  --cor-grade: rgb(21 128 61 / 0.07);
+
+  --sombra: 0 12px 30px -16px rgb(14 31 23 / 0.25);
+  --brilho: 0 0 0 1px rgb(21 128 61 / 0.25), 0 14px 36px -14px rgb(21 128 61 / 0.3);
+}
