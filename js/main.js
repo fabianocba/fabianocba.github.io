@@ -23,4 +23,13 @@
 
   const ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
+
+  window.formspree = window.formspree || function () {
+    (window.formspree.q = window.formspree.q || []).push(arguments);
+  };
+  window.formspree('initForm', {
+    formElement: '#form-contato',
+    formId: 'xpppbnyd',
+    useDefaultStyles: false,
+  });
 })();

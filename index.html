@@ -27,6 +27,7 @@
   <link rel="stylesheet" href="css/components.css">
 
   <script src="js/main.js" defer></script>
+  <script src="https://unpkg.com/@formspree/ajax@1.1.5/dist/global.js" defer></script>
 </head>
 
 <body>
@@ -335,44 +336,49 @@
             </a>
           </address>
 
-          <form class="form reveal" action="mailto:dev40ai@gmail.com" method="post" enctype="text/plain">
+          <form id="form-contato" class="form reveal" action="https://formspree.io/f/xpppbnyd" method="POST">
+            <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+
             <div class="campo">
               <label for="nome" class="campo__rotulo">Nome</label>
-              <input type="text" id="nome" name="nome" class="campo__entrada" required minlength="3" autocomplete="name" placeholder="Seu nome completo">
-              <p class="campo__erro">Informe seu nome (mínimo de 3 letras).</p>
+              <input type="text" id="nome" name="nome" class="campo__entrada" data-fs-field required minlength="3" autocomplete="name" placeholder="Seu nome completo">
+              <p class="campo__erro" data-fs-error="nome">Informe seu nome (mínimo de 3 letras).</p>
             </div>
 
             <div class="campo">
               <label for="email" class="campo__rotulo">E-mail</label>
-              <input type="email" id="email" name="email" class="campo__entrada" required autocomplete="email" placeholder="voce@exemplo.com">
-              <p class="campo__erro">Digite um e-mail válido.</p>
+              <input type="email" id="email" name="email" class="campo__entrada" data-fs-field required autocomplete="email" placeholder="voce@exemplo.com">
+              <p class="campo__erro" data-fs-error="email">Digite um e-mail válido.</p>
             </div>
 
             <div class="campo">
               <label for="telefone" class="campo__rotulo">Telefone <span class="campo__opcional">(opcional)</span></label>
-              <input type="tel" id="telefone" name="telefone" class="campo__entrada" autocomplete="tel" placeholder="(77) 99999-9999" pattern="\(?[0-9]{2}\)?\s?9?[0-9]{4}-?[0-9]{4}">
-              <p class="campo__erro">Use o formato (77) 99999-9999.</p>
+              <input type="tel" id="telefone" name="telefone" class="campo__entrada" data-fs-field autocomplete="tel" placeholder="(77) 99999-9999" pattern="\(?[0-9]{2}\)?\s?9?[0-9]{4}-?[0-9]{4}">
+              <p class="campo__erro" data-fs-error="telefone">Use o formato (77) 99999-9999.</p>
             </div>
 
             <div class="campo">
               <label for="assunto" class="campo__rotulo">Assunto</label>
-              <select id="assunto" name="assunto" class="campo__entrada" required>
+              <select id="assunto" name="assunto" class="campo__entrada" data-fs-field required>
                 <option value="">Selecione um assunto</option>
                 <option>Desenvolvimento de sistema</option>
                 <option>Site ou aplicativo</option>
                 <option>Consultoria</option>
                 <option>Outro</option>
               </select>
-              <p class="campo__erro">Escolha um assunto.</p>
+              <p class="campo__erro" data-fs-error="assunto">Escolha um assunto.</p>
             </div>
 
             <div class="campo campo--inteiro">
               <label for="mensagem" class="campo__rotulo">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" class="campo__entrada" rows="5" required minlength="10" placeholder="Conte um pouco sobre o seu problema ou projeto"></textarea>
-              <p class="campo__erro">A mensagem precisa ter pelo menos 10 caracteres.</p>
+              <textarea id="mensagem" name="mensagem" class="campo__entrada" data-fs-field rows="5" required minlength="10" placeholder="Conte um pouco sobre o seu problema ou projeto"></textarea>
+              <p class="campo__erro" data-fs-error="mensagem">A mensagem precisa ter pelo menos 10 caracteres.</p>
             </div>
 
-            <button type="submit" class="btn btn--primario campo--inteiro">Enviar mensagem</button>
+            <p class="form__aviso form__aviso--sucesso campo--inteiro" role="status" data-fs-success>Mensagem enviada! Retorno em breve.</p>
+            <p class="form__aviso form__aviso--erro campo--inteiro" role="alert" data-fs-error="">Não foi possível enviar a mensagem. Tente novamente ou use um dos outros canais de contato.</p>
+
+            <button type="submit" class="btn btn--primario campo--inteiro" data-fs-submit-btn>Enviar mensagem</button>
           </form>
         </div>
       </div>

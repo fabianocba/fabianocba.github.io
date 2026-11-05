@@ -399,6 +399,40 @@ textarea.campo__entrada {
   color: var(--cor-erro);
 }
 
+.campo__entrada[aria-invalid="true"] {
+  border-color: var(--cor-erro);
+}
+
+.campo__erro[data-fs-active] {
+  display: block;
+}
+
+.form__aviso {
+  display: none;
+  padding: 0.8rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: var(--raio-sm);
+  font-size: 0.95rem;
+}
+
+.form__aviso[data-fs-active] {
+  display: block;
+}
+
+.form__aviso--sucesso {
+  color: var(--cor-sucesso);
+}
+
+.form__aviso--erro {
+  color: var(--cor-erro);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
+}
+
 @keyframes surgir-baixo {
   from {
     opacity: 0;
